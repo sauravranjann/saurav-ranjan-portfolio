@@ -85,9 +85,11 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Button size="lg" className="w-full gap-2 shadow-glow">
-                <Download className="w-5 h-5" />
-                Download Full Résumé (PDF)
+              <Button asChild size="lg" className="w-full gap-2 shadow-glow">
+                <a href="https://drive.google.com/file/d/17e-ngD_bcSFeV0eeAAnVBlxBoNzcBldm/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-5 h-5" />
+                  Download Full Résumé (PDF)
+                </a>
               </Button>
             </div>
 

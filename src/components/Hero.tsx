@@ -29,8 +29,9 @@ const Hero = () => {
 
   return (
     <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Animated background gradient */}
-      <div className="absolute inset-0 hero-gradient opacity-10 animate-glow" />
+      {/* Solid background with subtle gradient overlay */}
+      <div className="absolute inset-0 bg-background" />
+      <div className="absolute inset-0 hero-gradient opacity-5" />
       
       {/* Floating particles effect */}
       <div className="absolute inset-0 overflow-hidden">
@@ -69,25 +70,33 @@ const Hero = () => {
           </div>
 
           <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            I build reliable mobile + backend systems that scale. AI, healthcare, and data-driven apps.
+            I build reliable mobile apps and backends that scale—AI, healthcare, and data-driven systems.
           </p>
 
           <div className="flex flex-wrap gap-4 justify-center mb-12">
-            <Button size="lg" className="gap-2 shadow-glow">
-              <Download className="w-5 h-5" />
-              Download Résumé
+            <Button asChild size="lg" className="gap-2 shadow-glow">
+              <a href="https://drive.google.com/file/d/17e-ngD_bcSFeV0eeAAnVBlxBoNzcBldm/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                <Download className="w-5 h-5" />
+                Download Résumé
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2">
-              <Mail className="w-5 h-5" />
-              Email Me
+            <Button asChild size="lg" variant="outline" className="gap-2">
+              <a href="mailto:sauravranjann@gmail.com">
+                <Mail className="w-5 h-5" />
+                Email Me
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2">
-              <Github className="w-5 h-5" />
-              GitHub
+            <Button asChild size="lg" variant="outline" className="gap-2">
+              <a href="https://github.com/sauravranjann" target="_blank" rel="noopener noreferrer">
+                <Github className="w-5 h-5" />
+                GitHub
+              </a>
             </Button>
-            <Button size="lg" variant="outline" className="gap-2">
-              <Linkedin className="w-5 h-5" />
-              LinkedIn
+            <Button asChild size="lg" variant="outline" className="gap-2">
+              <a href="https://linkedin.com/in/saurav-ranjann" target="_blank" rel="noopener noreferrer">
+                <Linkedin className="w-5 h-5" />
+                LinkedIn
+              </a>
             </Button>
           </div>
 

@@ -8,25 +8,29 @@ const CodingProfiles = () => {
       name: "LeetCode",
       url: "https://leetcode.com/u/sauravranjann",
       stats: "700+ Problems",
-      color: "from-orange-500 to-amber-500",
+      color: "bg-support/10 hover:bg-support/20",
+      iconBg: "bg-support",
     },
     {
       name: "GeeksforGeeks",
       url: "https://geeksforgeeks.org/user/sauravranjann",
       stats: "Active Contributor",
-      color: "from-green-500 to-emerald-500",
+      color: "bg-primary/10 hover:bg-primary/20",
+      iconBg: "bg-primary",
     },
     {
       name: "CodeChef",
       url: "https://codechef.com/users/cu_2ibcs3723",
       stats: "Regular Participant",
-      color: "from-amber-600 to-orange-600",
+      color: "bg-support/10 hover:bg-support/20",
+      iconBg: "bg-support",
     },
     {
       name: "Code360",
       url: "https://naukri.com/code360/profile/dffffff",
       stats: "Problem Solver",
-      color: "from-blue-500 to-indigo-500",
+      color: "bg-accent/10 hover:bg-accent/20",
+      iconBg: "bg-accent",
     },
   ];
 
@@ -50,11 +54,11 @@ const CodingProfiles = () => {
                 className="group relative overflow-hidden p-6 card-gradient border-border/50 hover:shadow-glow transition-all duration-300 animate-scale-in"
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
-                <div className={`absolute inset-0 bg-gradient-to-br ${profile.color} opacity-0 group-hover:opacity-10 transition-opacity duration-300`} />
+                <div className={`absolute inset-0 ${profile.color} transition-all duration-300`} />
                 
                 <div className="relative z-10">
                   <div className="flex items-center justify-center mb-4">
-                    <div className={`p-4 rounded-full bg-gradient-to-br ${profile.color}`}>
+                    <div className={`p-4 rounded-full ${profile.iconBg}`}>
                       <Code2 className="w-8 h-8 text-white" />
                     </div>
                   </div>

@@ -8,6 +8,21 @@ const Navigation = () => {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
+    // Check localStorage for saved theme preference
+    const savedTheme = localStorage.getItem("theme");
+    if (savedTheme === "dark") {
+      setIsDark(true);
+      document.documentElement.classList.add("dark");
+    } else if (savedTheme === "light") {
+      setIsDark(false);
+      document.documentElement.classList.remove("dark");
+    } else {
+      // Default to dark theme
+      setIsDark(true);
+      document.documentElement.classList.add("dark");
+      localStorage.setItem("theme", "dark");
+    }
+
     const handleScroll = () => {
       setIsScrolled(window.scrollY > 50);
     };
@@ -16,8 +31,10 @@ const Navigation = () => {
   }, []);
 
   const toggleTheme = () => {
-    setIsDark(!isDark);
+    const newTheme = !isDark;
+    setIsDark(newTheme);
     document.documentElement.classList.toggle("dark");
+    localStorage.setItem("theme", newTheme ? "dark" : "light");
   };
 
   const navLinks = [

@@ -15,7 +15,7 @@ const Projects = () => {
         live: "#",
         github: "#",
       },
-      gradient: "from-primary to-accent",
+      iconBg: "bg-primary",
     },
     {
       title: "AI Traffic Management System",
@@ -26,7 +26,7 @@ const Projects = () => {
       links: {
         github: "https://github.com/sauravranjann/Traffic_management_system_yolov8m",
       },
-      gradient: "from-accent to-support",
+      iconBg: "bg-accent",
     },
     {
       title: "Data Structures Library",
@@ -37,7 +37,7 @@ const Projects = () => {
       links: {
         github: "https://github.com/sauravranjann/Data-Structure-Utilities",
       },
-      gradient: "from-support to-primary",
+      iconBg: "bg-support",
     },
   ];
 
@@ -58,7 +58,7 @@ const Projects = () => {
                 style={{ animationDelay: `${index * 0.1}s` }}
               >
                 {/* Icon with gradient background */}
-                <div className={`inline-flex p-4 rounded-lg bg-gradient-to-br ${project.gradient} mb-4`}>
+                <div className={`inline-flex p-4 rounded-lg ${project.iconBg} mb-4`}>
                   <project.icon className="w-8 h-8 text-white" />
                 </div>
 
