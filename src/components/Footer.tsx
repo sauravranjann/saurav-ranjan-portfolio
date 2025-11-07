@@ -1,4 +1,4 @@
-import { Mail, Phone, Linkedin, Github, Heart } from "lucide-react";
+import { Mail, Phone, Linkedin, Github, Heart, Code2 } from "lucide-react";
 
 const Footer = () => {
   const socialLinks = [
@@ -8,11 +8,19 @@ const Footer = () => {
     { icon: Github, href: "https://github.com/sauravranjann", label: "GitHub" },
   ];
 
+  const codingProfiles = [
+    { name: "LeetCode", href: "https://leetcode.com/u/sauravranjann" },
+    { name: "GFG", href: "https://geeksforgeeks.org/user/sauravranjann" },
+    { name: "CodeChef", href: "https://codechef.com/users/cu_2ibcs3723" },
+    { name: "Code360", href: "https://naukri.com/code360/profile/dffffff" },
+  ];
+
   const quickLinks = [
     { label: "About", href: "#about" },
     { label: "Experience", href: "#experience" },
     { label: "Projects", href: "#projects" },
     { label: "Skills", href: "#skills" },
+    { label: "Coding Profiles", href: "#coding-profiles" },
     { label: "Contact", href: "#contact" },
   ];
 
@@ -74,9 +82,22 @@ const Footer = () => {
                   +91-9508604255
                 </a>
               </p>
-              <p className="text-sm mt-4">
-                Open to full-time roles in<br />Mobile & Backend Engineering
+              <p className="text-sm mt-4 font-semibold text-primary">
+                Open to Mobile & Backend Engineering roles
               </p>
+              <div className="flex gap-2 mt-4 flex-wrap">
+                {codingProfiles.map((profile, index) => (
+                  <a
+                    key={index}
+                    href={profile.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-xs px-2 py-1 bg-accent/10 hover:bg-accent/20 text-accent rounded border border-accent/20 transition-colors"
+                  >
+                    {profile.name}
+                  </a>
+                ))}
+              </div>
             </div>
           </div>
         </div>

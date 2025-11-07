@@ -56,7 +56,7 @@ const Contact = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4" />
           
           <p className="text-center text-lg text-muted-foreground mb-12">
-            Open to full-time roles in Mobile & Backend Engineering
+            Open to Mobile & Backend Engineering roles
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
@@ -85,7 +85,7 @@ const Contact = () => {
                 </div>
               </Card>
 
-              <Button asChild size="lg" className="w-full gap-2 shadow-glow">
+              <Button asChild size="lg" className="w-full gap-2">
                 <a href="https://drive.google.com/file/d/17e-ngD_bcSFeV0eeAAnVBlxBoNzcBldm/view?usp=sharing" target="_blank" rel="noopener noreferrer">
                   <Download className="w-5 h-5" />
                   Download Full Résumé (PDF)

@@ -7,21 +7,32 @@ const Projects = () => {
   const projects = [
     {
       title: "HPNHM Healthcare App",
-      description: "Public health reporting system for mothers & children with scalable data architecture",
+      description: "Public health reporting for mothers & children. Used by health workers across the state with real-time data pipelines.",
       icon: Smartphone,
-      metrics: ["50,000+ Users", "200+ Rural Areas", "40% Efficiency Boost"],
+      metrics: ["50,000+ Active Users", "200+ Rural Areas", "40% Faster Reporting", "10,000+ Daily Records"],
       tech: ["React Native", "Spring Boot", "PostgreSQL"],
       links: {
-        live: "#",
-        github: "#",
+        live: "https://play.google.com/store/apps/details?id=com.hpnhm_app&hl=en_IN",
       },
       iconBg: "bg-primary",
     },
     {
-      title: "AI Traffic Management System",
-      description: "Dynamic signal control using YOLOv8 for real-time vehicle detection",
+      title: "Resume Wizard AI",
+      description: "AI-powered résumé builder using React, Node.js, and prompt engineering. Generates ATS-friendly résumés with dynamic templates.",
       icon: Brain,
-      metrics: ["~30% Wait Time Reduction", "~80% Detection Accuracy", "1,000+ Test Scenarios"],
+      metrics: ["Full MERN Stack", "LLM Integration", "Component Logic", "Template Engine"],
+      tech: ["React", "Node.js", "LLM", "Prompt Engineering"],
+      links: {
+        live: "https://resume-wizard-ai-frontend.lovable.app/",
+        github: "https://github.com/sauravranjann/Resume-Builder",
+      },
+      iconBg: "bg-primary",
+    },
+    {
+      title: "Traffic Management System",
+      description: "Intelligent signal timing using AI computer vision. Dynamic signal control with YOLOv8 for real-time vehicle detection.",
+      icon: Brain,
+      metrics: ["30% Wait Time Reduction", "80% Detection Accuracy", "1,000+ Test Scenarios"],
       tech: ["Python", "OpenCV", "YOLOv8", "AI/ML"],
       links: {
         github: "https://github.com/sauravranjann/Traffic_management_system_yolov8m",
@@ -30,9 +41,9 @@ const Projects = () => {
     },
     {
       title: "Data Structures Library",
-      description: "Optimized C++ implementations with comprehensive documentation",
+      description: "4+ optimized data structures with clean API. C++ implementations with ~30% faster lookups.",
       icon: Database,
-      metrics: ["4+ Data Structures", "~30% Efficiency Gains", "10+ Developers Using"],
+      metrics: ["4+ Data Structures", "~30% Efficiency Gains", "Clean API", "10+ Developers Using"],
       tech: ["C++", "DSA", "Templates", "STL"],
       links: {
         github: "https://github.com/sauravranjann/Data-Structure-Utilities",

@@ -1,14 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Download, Mail, Github, Linkedin } from "lucide-react";
+import { ArrowRight, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const roles = [
-  "React-Native",
-  "Java/Spring Boot",
-  "PostgreSQL",
-  "REST APIs",
-  "DSA",
+  "React Native Developer",
+  "Java & Spring Boot Engineer",
+  "Backend API Developer",
+  "AI/ML Project Contributor",
+  "DSA Practitioner (700+ problems)",
 ];
 
 const Hero = () => {
@@ -17,109 +17,80 @@ const Hero = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       setCurrentRoleIndex((prev) => (prev + 1) % roles.length);
-    }, 2000);
+    }, 2500);
     return () => clearInterval(interval);
   }, []);
 
-  const stats = [
-    { value: "700+", label: "DSA Problems Solved" },
-    { value: "50,000+", label: "Users Reached" },
-    { value: "3+", label: "Years Experience" },
-  ];
-
   return (
-    <section className="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
-      {/* Solid background with subtle gradient overlay */}
+    <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+      {/* Spotlight gradient background */}
       <div className="absolute inset-0 bg-background" />
-      <div className="absolute inset-0 hero-gradient opacity-5" />
+      <div className="absolute inset-0 hero-gradient" />
       
-      {/* Floating particles effect */}
-      <div className="absolute inset-0 overflow-hidden">
-        {[...Array(20)].map((_, i) => (
-          <div
-            key={i}
-            className="absolute w-2 h-2 bg-primary/20 rounded-full animate-float"
-            style={{
-              left: `${Math.random() * 100}%`,
-              top: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 3}s`,
-              animationDuration: `${3 + Math.random() * 2}s`,
-            }}
-          />
-        ))}
-      </div>
+      {/* Subtle grid pattern */}
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-20" />
 
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="max-w-4xl mx-auto text-center animate-fade-up">
-          <div className="mb-6 inline-block">
-            <Badge variant="secondary" className="px-4 py-2 text-sm">
-              Available for Full-Time Opportunities
-            </Badge>
+      <div className="container mx-auto px-4 relative z-10 py-20">
+        <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center max-w-7xl mx-auto">
+          {/* Left: Text Content */}
+          <div className="text-left animate-fade-up space-y-8">
+            <div className="inline-block">
+              <Badge variant="secondary" className="px-4 py-2 text-sm border border-primary/20">
+                Available for Full-Time Opportunities
+              </Badge>
+            </div>
+
+            <div>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-bold mb-4 leading-tight">
+                Saurav Ranjan
+              </h1>
+              <p className="text-xl md:text-2xl font-semibold text-muted-foreground mb-6">
+                Full-Stack Engineer
+                <br />
+                <span className="text-primary">(React Native • Java • Spring Boot)</span>
+              </p>
+            </div>
+
+            <div className="h-8 font-mono text-base text-accent flex items-center">
+              <span className="animate-pulse">{roles[currentRoleIndex]}</span>
+            </div>
+
+            <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
+              I design and build scalable mobile + backend systems with clean architecture and precise execution.
+            </p>
+
+            <div className="flex flex-wrap gap-4 pt-4">
+              <Button asChild size="lg" className="gap-2">
+                <a href="#contact">
+                  Let's Get Started
+                  <ArrowRight className="w-5 h-5" />
+                </a>
+              </Button>
+              <Button asChild size="lg" variant="outline" className="gap-2">
+                <a href="https://drive.google.com/file/d/17e-ngD_bcSFeV0eeAAnVBlxBoNzcBldm/view?usp=sharing" target="_blank" rel="noopener noreferrer">
+                  <Download className="w-5 h-5" />
+                  Download Résumé
+                </a>
+              </Button>
+            </div>
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight">
-            <span className="text-gradient">Saurav Ranjan</span>
-          </h1>
-
-          <div className="text-2xl md:text-3xl font-semibold mb-4 text-foreground/90">
-            React Native & Spring Boot Engineer
-          </div>
-
-          <div className="h-8 mb-6 font-mono text-lg text-accent">
-            <span className="animate-pulse">{roles[currentRoleIndex]}</span>
-          </div>
-
-          <p className="text-lg md:text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
-            I build reliable mobile apps and backends that scale—AI, healthcare, and data-driven systems.
-          </p>
-
-          <div className="flex flex-wrap gap-4 justify-center mb-12">
-            <Button asChild size="lg" className="gap-2 shadow-glow">
-              <a href="https://drive.google.com/file/d/17e-ngD_bcSFeV0eeAAnVBlxBoNzcBldm/view?usp=sharing" target="_blank" rel="noopener noreferrer">
-                <Download className="w-5 h-5" />
-                Download Résumé
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="gap-2">
-              <a href="mailto:sauravranjann@gmail.com">
-                <Mail className="w-5 h-5" />
-                Email Me
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="gap-2">
-              <a href="https://github.com/sauravranjann" target="_blank" rel="noopener noreferrer">
-                <Github className="w-5 h-5" />
-                GitHub
-              </a>
-            </Button>
-            <Button asChild size="lg" variant="outline" className="gap-2">
-              <a href="https://linkedin.com/in/saurav-ranjann" target="_blank" rel="noopener noreferrer">
-                <Linkedin className="w-5 h-5" />
-                LinkedIn
-              </a>
-            </Button>
-          </div>
-
-          {/* Stats */}
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            {stats.map((stat, index) => (
-              <div
-                key={index}
-                className="animate-scale-in p-6 rounded-lg bg-card/50 backdrop-blur-sm border border-border/50"
-                style={{ animationDelay: `${index * 0.1}s` }}
-              >
-                <div className="text-3xl md:text-4xl font-bold text-gradient mb-2">
-                  {stat.value}
+          {/* Right: Profile Image */}
+          <div className="flex justify-center lg:justify-end animate-scale-in">
+            <div className="relative">
+              <div className="absolute inset-0 bg-primary/20 rounded-full blur-3xl animate-pulse" />
+              <div className="relative w-64 h-64 md:w-80 md:h-80 lg:w-96 lg:h-96 rounded-full bg-gradient-to-br from-card to-card/50 border border-border/50 shadow-2xl overflow-hidden">
+                <div className="absolute inset-0 flex items-center justify-center text-9xl font-bold text-primary/20">
+                  SR
                 </div>
-                <div className="text-sm text-muted-foreground">{stat.label}</div>
               </div>
-            ))}
+            </div>
           </div>
         </div>
       </div>
 
       {/* Scroll indicator */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
+      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce hidden lg:block">
         <div className="w-6 h-10 border-2 border-primary/30 rounded-full flex items-start justify-center p-2">
           <div className="w-1 h-3 bg-primary rounded-full animate-pulse" />
         </div>

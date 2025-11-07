@@ -30,13 +30,13 @@ const Skills = () => {
       ],
     },
     {
-      title: "Tools & Concepts",
+      title: "Concepts",
       icon: Wrench,
       skills: [
-        { name: "Git & GitHub", level: 92 },
+        { name: "OOP", level: 92 },
+        { name: "DSA", level: 88 },
         { name: "REST APIs", level: 90 },
-        { name: "OOP & DSA", level: 88 },
-        { name: "MVC Architecture", level: 85 },
+        { name: "MVC", level: 85 },
       ],
     },
   ];
@@ -93,7 +93,7 @@ const Skills = () => {
           <Card className="mt-6 p-6 card-gradient border-border/50">
             <h3 className="text-lg font-bold mb-4 text-center">Additional Expertise</h3>
             <div className="flex flex-wrap gap-3 justify-center">
-              {["Postman", "APIDog", "VS Code", "Copilot", "API Integration", "DBMS", "Prompt Engineering"].map(
+              {["DBMS", "API Integration", "Postman", "APIDog", "VS Code", "Copilot", "Prompt Engineering", "Multithreading", "Optimization", "Git", "GitHub"].map(
                 (skill, index) => (
                   <div
                     key={index}

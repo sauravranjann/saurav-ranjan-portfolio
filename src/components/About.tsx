@@ -27,9 +27,9 @@ const About = () => {
 
           <Card className="p-8 mb-8 card-gradient border-border/50">
             <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-              Motivated Software Engineer skilled in Java, React Native, SQL, and Spring Boot. 
-              Hands-on experience in AI-driven and healthcare apps. Strong in OOP, REST API design, 
-              and DSA. Passionate about scalable, maintainable systems and collaborative delivery.
+              Saurav Ranjan is a motivated Software Engineer skilled in Java, React Native, and Spring Boot, 
+              with hands-on experience building AI-driven, healthcare, and data-heavy applications. Strong in 
+              OOP, REST API design, PostgreSQL, and production-grade mobile app development.
             </p>
 
             <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg border border-primary/10">

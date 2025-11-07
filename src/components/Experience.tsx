@@ -12,9 +12,11 @@ const Experience = () => {
 
   const highlights = [
     "Built HPNHM Healthcare App serving 50,000+ users across 200+ rural areas",
-    "Developed 8+ reusable React Native components, accelerating delivery by 20%",
-    "Architected Spring Boot + PostgreSQL backend processing 10,000+ daily records",
+    "Improved reporting efficiency by 40% with real-time data pipelines",
+    "Designed 8+ reusable React Native components, accelerating delivery by 20%",
+    "Developed Spring Boot + PostgreSQL backend processing 10,000+ daily records",
     "Implemented robust authentication, validation, and reporting modules",
+    "Handled deployment, API integration, and optimization for production use",
   ];
 
   return (
