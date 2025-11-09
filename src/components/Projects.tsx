@@ -12,7 +12,7 @@ const Projects = () => {
       metrics: ["50,000+ Active Users", "200+ Rural Areas", "40% Faster Reporting", "10,000+ Daily Records"],
       tech: ["React Native", "Spring Boot", "PostgreSQL"],
       links: {
-        live: "https://play.google.com/store/apps/details?id=com.hpnhm_app&hl=en_IN",
+        live: "https://play.google.com/store/apps/details?id=com.hpnhm_app&pcampaignid=web_share",
       },
       iconBg: "bg-primary",
     },
