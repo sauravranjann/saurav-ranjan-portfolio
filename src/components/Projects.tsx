@@ -110,9 +110,15 @@ const Projects = () => {
                 {/* Links */}
                 <div className="flex gap-2 mt-auto pt-4 border-t border-border/50">
                   {project.links.live && (
-                    <Button size="sm" variant="outline" className="flex-1 gap-2">
-                      <ExternalLink className="w-4 h-4" />
-                      Live
+                    <Button size="sm" variant="outline" className="flex-1 gap-2" asChild>
+                      <a
+                        href={project.links.live}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                      >
+                        <ExternalLink className="w-4 h-4" />
+                        Live
+                      </a>
                     </Button>
                   )}
                   {project.links.github && (
