@@ -4,10 +4,10 @@ import { ArrowRight, Download } from "lucide-react";
 import { useEffect, useState } from "react";
 
 const roles = [
-  "React Native Developer",
-  "Java & Spring Boot Engineer",
-  "Backend API Developer",
-  "AI/ML Project Contributor",
+  "Java Backend Engineer",
+  "Spring Boot & Microservices",
+  "REST API Developer",
+  "React Native Contributor",
   "DSA Practitioner (700+ problems)",
 ];
 
@@ -45,9 +45,9 @@ const Hero = () => {
                 Saurav Ranjan
               </h1>
               <p className="text-xl md:text-2xl font-semibold text-muted-foreground mb-6">
-                Full-Stack Engineer
+                Java Backend Engineer
                 <br />
-                <span className="text-primary">(React Native • Java • Spring Boot)</span>
+                <span className="text-primary">(Spring Boot • Microservices • REST APIs)</span>
               </p>
             </div>
 
@@ -56,7 +56,7 @@ const Hero = () => {
             </div>
 
             <p className="text-lg text-muted-foreground leading-relaxed max-w-xl">
-              I design and build scalable mobile + backend systems with clean architecture and precise execution.
+              I design and build scalable backend systems with clean architecture, secure APIs, and precise execution.
             </p>
 
             <div className="flex flex-wrap gap-4 pt-4">

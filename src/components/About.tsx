@@ -10,10 +10,10 @@ const About = () => {
   ];
 
   const skills = [
-    "Java", "C++", "SQL", "Spring Boot", "Hibernate/JPA", 
-    "React-Native", "PostgreSQL", "Oracle", "REST APIs", 
-    "MVC", "OOP", "DSA", "DBMS", "API Integration", 
-    "Git", "GitHub", "Postman", "APIDog", "VS Code", "Copilot"
+    "Java", "Spring Boot", "Microservices", "REST APIs",
+    "Kafka", "Redis", "MySQL", "PostgreSQL", "MongoDB",
+    "Keycloak", "OAuth2", "Docker", "Hibernate/JPA",
+    "React Native", "Git", "GitHub", "Postman", "DSA", "OOP"
   ];
 
   return (
@@ -27,9 +27,9 @@ const About = () => {
 
           <Card className="p-8 mb-8 card-gradient border-border/50">
             <p className="text-lg text-foreground/90 leading-relaxed mb-6">
-              Saurav Ranjan is a motivated Software Engineer skilled in Java, React Native, and Spring Boot, 
-              with hands-on experience building AI-driven, healthcare, and data-heavy applications. Strong in 
-              OOP, REST API design, PostgreSQL, and production-grade mobile app development.
+              Saurav Ranjan is a Java Backend Engineer skilled in Spring Boot, microservices, and REST API design. 
+              He has hands-on experience building secure, scalable backend systems for healthcare and AI-driven 
+              applications, with strong foundations in OOP, DSA, SQL/NoSQL databases, and DevOps tooling.
             </p>
 
             <div className="flex items-start gap-4 p-4 bg-primary/5 rounded-lg border border-primary/10">
