@@ -7,36 +7,39 @@ const Skills = () => {
       title: "Languages",
       icon: Code2,
       skills: [
-        { name: "Java", level: 90 },
+        { name: "Java", level: 92 },
         { name: "C++", level: 85 },
         { name: "SQL", level: 88 },
       ],
     },
     {
-      title: "Frameworks",
+      title: "Frameworks & Backend",
       icon: Server,
       skills: [
-        { name: "Spring Boot", level: 88 },
-        { name: "Hibernate/JPA", level: 85 },
-        { name: "React Native", level: 90 },
+        { name: "Spring Boot", level: 90 },
+        { name: "Hibernate/JPA", level: 86 },
+        { name: "REST APIs", level: 90 },
+        { name: "React Native", level: 82 },
       ],
     },
     {
-      title: "Databases",
+      title: "Databases & Caching",
       icon: Database,
       skills: [
-        { name: "PostgreSQL", level: 87 },
-        { name: "Oracle", level: 82 },
+        { name: "PostgreSQL", level: 88 },
+        { name: "MySQL", level: 86 },
+        { name: "MongoDB", level: 80 },
+        { name: "Redis", level: 78 },
       ],
     },
     {
-      title: "Concepts",
+      title: "Architecture & DevOps",
       icon: Wrench,
       skills: [
-        { name: "OOP", level: 92 },
-        { name: "DSA", level: 88 },
-        { name: "REST APIs", level: 90 },
-        { name: "MVC", level: 85 },
+        { name: "Microservices", level: 85 },
+        { name: "OAuth2 / Keycloak", level: 80 },
+        { name: "Docker", level: 78 },
+        { name: "Kafka", level: 75 },
       ],
     },
   ];
@@ -93,7 +96,7 @@ const Skills = () => {
           <Card className="mt-6 p-6 card-gradient border-border/50">
             <h3 className="text-lg font-bold mb-4 text-center">Additional Expertise</h3>
             <div className="flex flex-wrap gap-3 justify-center">
-              {["DBMS", "API Integration", "Postman", "APIDog", "VS Code", "Copilot", "Prompt Engineering", "Multithreading", "Optimization", "Git", "GitHub"].map(
+              {["OOP", "DSA", "API Integration", "Postman", "APIDog", "VS Code", "Copilot", "Prompt Engineering", "Multithreading", "Optimization", "Git", "GitHub"].map(
                 (skill, index) => (
                   <div
                     key={index}

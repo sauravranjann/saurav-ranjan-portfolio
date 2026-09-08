@@ -32,7 +32,7 @@ const Footer = () => {
           <div>
             <h3 className="text-2xl font-bold text-gradient mb-4">Saurav Ranjan</h3>
             <p className="text-muted-foreground mb-4">
-              Full-Stack Engineer specializing in React Native & Spring Boot.
+              Java Backend Engineer specializing in Spring Boot & Microservices.
               Building reliable, scalable systems.
             </p>
             <div className="flex gap-3">
@@ -83,7 +83,7 @@ const Footer = () => {
                 </a>
               </p>
               <p className="text-sm mt-4 font-semibold text-primary">
-                Open to Mobile & Backend Engineering roles
+                Open to Java Backend & Software Engineering roles
               </p>
               <div className="flex gap-2 mt-4 flex-wrap">
                 {codingProfiles.map((profile, index) => (

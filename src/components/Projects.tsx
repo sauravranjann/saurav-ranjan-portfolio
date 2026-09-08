@@ -7,10 +7,10 @@ const Projects = () => {
   const projects = [
     {
       title: "HPNHM Healthcare App",
-      description: "Public health reporting for mothers & children. Used by health workers across the state with real-time data pipelines.",
+      description: "Public health reporting for mothers & children. Spring Boot + PostgreSQL backend serving health workers across the state with real-time data pipelines.",
       icon: Smartphone,
       metrics: ["50,000+ Active Users", "200+ Rural Areas", "40% Faster Reporting", "10,000+ Daily Records"],
-      tech: ["React Native", "Spring Boot", "PostgreSQL"],
+      tech: ["Java", "Spring Boot", "PostgreSQL", "React Native", "REST APIs"],
       links: {
         live: "https://play.google.com/store/apps/details?id=com.hpnhm_app&pcampaignid=web_share",
       },

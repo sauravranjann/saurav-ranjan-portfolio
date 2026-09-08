@@ -56,7 +56,7 @@ const Contact = () => {
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-4" />
           
           <p className="text-center text-lg text-muted-foreground mb-12">
-            Open to Mobile & Backend Engineering roles
+            Open to Java Backend & Software Engineering roles
           </p>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">

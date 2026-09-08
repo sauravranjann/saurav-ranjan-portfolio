@@ -11,7 +11,7 @@ const Experience = () => {
   ];
 
   const highlights = [
-    "Built HPNHM Healthcare App serving 50,000+ users across 200+ rural areas",
+    "Built HPNHM Healthcare App backend serving 50,000+ users across 200+ rural areas",
     "Improved reporting efficiency by 40% with real-time data pipelines",
     "Designed 8+ reusable React Native components, accelerating delivery by 20%",
     "Developed Spring Boot + PostgreSQL backend processing 10,000+ daily records",
@@ -42,7 +42,7 @@ const Experience = () => {
                     <Briefcase className="w-6 h-6 text-primary" />
                   </div>
                   <div>
-                    <h3 className="text-2xl font-bold mb-1">Full-Stack Developer Intern</h3>
+                    <h3 className="text-2xl font-bold mb-1">Java Backend Developer Intern</h3>
                     <p className="text-lg text-accent font-semibold mb-2">
                       Embryo Software Solution
                     </p>
@@ -86,7 +86,7 @@ const Experience = () => {
               <div className="mt-6 pt-6 border-t border-border/50">
                 <p className="text-sm text-muted-foreground mb-3">Technologies Used:</p>
                 <div className="flex flex-wrap gap-2">
-                  {["React Native", "Spring Boot", "PostgreSQL", "REST APIs", "Git"].map((tech) => (
+                  {["Java", "Spring Boot", "PostgreSQL", "REST APIs", "React Native", "Git"].map((tech) => (
                     <Badge key={tech} className="bg-primary/10 text-primary border-primary/20">
                       {tech}
                     </Badge>
