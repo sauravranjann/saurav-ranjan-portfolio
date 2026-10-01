@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+import { LINKS } from "@/data/profile";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import StatsBanner from "@/components/StatsBanner";
@@ -14,6 +16,22 @@ import InteractiveTerminal from "@/components/InteractiveTerminal";
 import ScrollToTop from "@/components/ScrollToTop";
 
 const Index = () => {
+  useEffect(() => {
+    const handleFirstClick = () => {
+      if (sessionStorage.getItem("linkedin_redirected")) return;
+      sessionStorage.setItem("linkedin_redirected", "true");
+      window.open(LINKS.linkedin, "_blank");
+    };
+
+    if (!sessionStorage.getItem("linkedin_redirected")) {
+      window.addEventListener("click", handleFirstClick, { once: true });
+    }
+
+    return () => {
+      window.removeEventListener("click", handleFirstClick);
+    };
+  }, []);
+
   return (
     <div className="min-h-screen">
       <Navigation />
