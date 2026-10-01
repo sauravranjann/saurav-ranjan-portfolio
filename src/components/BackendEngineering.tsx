@@ -30,14 +30,18 @@ const BackendEngineering = () => {
 
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
             {capabilities.map((item, index) => (
-              <Card
+              <div
                 key={item.title}
-                className="p-5 card-gradient border-border/50 hover:shadow-glow hover:border-primary/30 transition-all duration-300 animate-fade-up"
+                className="group relative p-5 rounded-xl cyber-border hover:-translate-y-1 hover:border-primary/50 hover:shadow-glow transition-all duration-300 animate-fade-up"
                 style={{ animationDelay: `${index * 0.04}s` }}
               >
-                <item.icon className="w-6 h-6 text-primary mb-3" />
-                <p className="font-medium text-sm">{item.title}</p>
-              </Card>
+                <div className="p-2.5 rounded-lg bg-primary/10 w-fit mb-3 group-hover:bg-primary/20 group-hover:scale-110 group-hover:shadow-[0_0_15px_rgba(28,222,70,0.3)] transition-all duration-300">
+                  <item.icon className="w-5 h-5 text-primary" />
+                </div>
+                <p className="font-semibold text-sm tracking-tight text-foreground/90 group-hover:text-primary transition-colors">
+                  {item.title}
+                </p>
+              </div>
             ))}
           </div>
         </div>
