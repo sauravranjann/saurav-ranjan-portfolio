@@ -1,49 +1,22 @@
 import { Card } from "@/components/ui/card";
-import { Code2, Server, Database, Wrench } from "lucide-react";
+import { Badge } from "@/components/ui/badge";
+import { Code2, Server, Database, Shield, Network, Wrench, Layers } from "lucide-react";
+
+const skillCategories = [
+  { title: "Languages", icon: Code2, skills: ["Java", "SQL"] },
+  {
+    title: "Backend",
+    icon: Server,
+    skills: ["Spring Boot", "Spring MVC", "Spring Data JPA", "Hibernate", "REST APIs", "Microservices"],
+  },
+  { title: "Messaging & Caching", icon: Network, skills: ["Kafka", "Redis"] },
+  { title: "Databases", icon: Database, skills: ["MySQL", "PostgreSQL", "MongoDB"] },
+  { title: "Security", icon: Shield, skills: ["Keycloak", "OAuth2", "JWT"] },
+  { title: "Server / DevOps", icon: Layers, skills: ["Nginx", "Linux", "Docker", "Gradle"] },
+  { title: "Tools", icon: Wrench, skills: ["Git", "GitHub", "Postman", "Swagger"] },
+];
 
 const Skills = () => {
-  const skillCategories = [
-    {
-      title: "Languages",
-      icon: Code2,
-      skills: [
-        { name: "Java", level: 92 },
-        { name: "C++", level: 85 },
-        { name: "SQL", level: 88 },
-      ],
-    },
-    {
-      title: "Frameworks & Backend",
-      icon: Server,
-      skills: [
-        { name: "Spring Boot", level: 90 },
-        { name: "Hibernate/JPA", level: 86 },
-        { name: "REST APIs", level: 90 },
-        { name: "React Native", level: 82 },
-      ],
-    },
-    {
-      title: "Databases & Caching",
-      icon: Database,
-      skills: [
-        { name: "PostgreSQL", level: 88 },
-        { name: "MySQL", level: 86 },
-        { name: "MongoDB", level: 80 },
-        { name: "Redis", level: 78 },
-      ],
-    },
-    {
-      title: "Architecture & DevOps",
-      icon: Wrench,
-      skills: [
-        { name: "Microservices", level: 85 },
-        { name: "OAuth2 / Keycloak", level: 80 },
-        { name: "Docker", level: 78 },
-        { name: "Kafka", level: 75 },
-      ],
-    },
-  ];
-
   return (
     <section id="skills" className="py-20">
       <div className="container mx-auto px-4">
@@ -53,59 +26,43 @@ const Skills = () => {
           </h2>
           <div className="w-20 h-1 bg-gradient-to-r from-primary to-accent mx-auto mb-12" />
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            {skillCategories.map((category, categoryIndex) => (
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            {skillCategories.map((category, index) => (
               <Card
-                key={categoryIndex}
-                className="p-6 card-gradient border-border/50 animate-fade-up"
-                style={{ animationDelay: `${categoryIndex * 0.1}s` }}
+                key={category.title}
+                className="p-6 card-gradient border-border/50 animate-fade-up hover:shadow-glow transition-all duration-300"
+                style={{ animationDelay: `${index * 0.06}s` }}
               >
-                <div className="flex items-center gap-3 mb-6">
+                <div className="flex items-center gap-3 mb-5">
                   <div className="p-3 bg-primary/10 rounded-lg">
-                    <category.icon className="w-6 h-6 text-primary" />
+                    <category.icon className="w-5 h-5 text-primary" />
                   </div>
-                  <h3 className="text-xl font-bold">{category.title}</h3>
+                  <h3 className="text-lg font-bold">{category.title}</h3>
                 </div>
-
-                <div className="space-y-4">
-                  {category.skills.map((skill, skillIndex) => (
-                    <div key={skillIndex}>
-                      <div className="flex justify-between items-center mb-2">
-                        <span className="font-medium text-sm">{skill.name}</span>
-                        <span className="text-sm text-muted-foreground font-mono">
-                          {skill.level}%
-                        </span>
-                      </div>
-                      <div className="h-2 bg-secondary rounded-full overflow-hidden">
-                        <div
-                          className="h-full bg-gradient-to-r from-primary to-accent rounded-full transition-all duration-1000 ease-out"
-                          style={{
-                            width: `${skill.level}%`,
-                            animationDelay: `${(categoryIndex * 0.1) + (skillIndex * 0.05)}s`,
-                          }}
-                        />
-                      </div>
-                    </div>
+                <div className="flex flex-wrap gap-2">
+                  {category.skills.map((skill) => (
+                    <Badge key={skill} variant="secondary" className="font-mono text-xs px-3 py-1.5">
+                      {skill}
+                    </Badge>
                   ))}
                 </div>
               </Card>
             ))}
           </div>
 
-          {/* Additional Skills */}
           <Card className="mt-6 p-6 card-gradient border-border/50">
-            <h3 className="text-lg font-bold mb-4 text-center">Additional Expertise</h3>
-            <div className="flex flex-wrap gap-3 justify-center">
-              {["OOP", "DSA", "API Integration", "Postman", "APIDog", "VS Code", "Copilot", "Prompt Engineering", "Multithreading", "Optimization", "Git", "GitHub"].map(
-                (skill, index) => (
-                  <div
-                    key={index}
-                    className="px-4 py-2 bg-accent/10 text-accent rounded-lg border border-accent/20 text-sm font-medium hover:bg-accent/20 transition-colors"
-                  >
-                    {skill}
-                  </div>
-                )
-              )}
+            <h3 className="text-base font-bold mb-4 text-center text-muted-foreground">
+              Additional
+            </h3>
+            <div className="flex flex-wrap gap-2 justify-center">
+              {["React Native", "React.js", "OOP", "DSA"].map((skill) => (
+                <span
+                  key={skill}
+                  className="px-3 py-1.5 bg-muted text-muted-foreground rounded-md border border-border text-xs font-mono"
+                >
+                  {skill}
+                </span>
+              ))}
             </div>
           </Card>
         </div>
